@@ -27,8 +27,8 @@ async def test_homepage_table(config, expected_html, tmpdir):
 
 
 @pytest.mark.asyncio
-async def test_homepage_404_if_no_tables():
+async def test_homepage_if_no_tables():
     datasette = Datasette(memory=True)
     response = await datasette.client.get("/")
-    assert response.status_code == 404
-    assert "No tables found" in response.text
+    assert response.status_code == 200
+    assert "index.html" in response.text
