@@ -1,6 +1,6 @@
 [project]
 name = "datasette-homepage-table"
-version = "0.1"
+version = "0.2"
 description = "Show a specific Datasette table on the homepage"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
