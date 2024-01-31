@@ -1,0 +1,30 @@
+[project]
+name = "datasette-homepage-table"
+version = "0.1"
+description = "Show a specific Datasette table on the homepage"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = {text = "Apache-2.0"}
+classifiers=[
+    "Framework :: Datasette",
+    "License :: OSI Approved :: Apache Software License"
+]
+requires-python = ">=3.8"
+dependencies = [
+    "datasette"
+]
+
+[project.urls]
+Homepage = "https://github.com/datasette/datasette-homepage-table"
+Changelog = "https://github.com/datasette/datasette-homepage-table/releases"
+Issues = "https://github.com/datasette/datasette-homepage-table/issues"
+CI = "https://github.com/datasette/datasette-homepage-table/actions"
+
+[project.entry-points.datasette]
+homepage_table = "datasette_homepage_table"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio", "datasette_test"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
