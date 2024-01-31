@@ -31,6 +31,8 @@ Alternatively you can configure it like this:
     }
 }
 ```
+Both keys are optional: if you omit `database` it will use the first attached database, and if you omit `table` it will use the first table in the database.
+
 You can customize the `table.html` template to [change the appearance of the table](https://docs.datasette.io/en/stable/custom_templates.html#custom-templates).
 
 ## Development

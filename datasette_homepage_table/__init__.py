@@ -10,7 +10,7 @@ async def homepage_table(datasette, scope, receive):
     if not database:
         database = datasette.get_database().name
     if not table:
-        table_names = await datasette.get_database().table_names()
+        table_names = await datasette.get_database(database).table_names()
         if table_names:
             table = table_names[0]
     if table:
